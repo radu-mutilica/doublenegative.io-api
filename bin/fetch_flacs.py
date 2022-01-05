@@ -1,4 +1,4 @@
-from doublenegative import run_app
+from doublenegative import app
 
 if __name__ == '__main__':
-    run_app(config_path='config.ini')
+    app(config_path='config.yaml').run()

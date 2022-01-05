@@ -1,1 +1,1 @@
-from doublenegative.runner import run_app
+from doublenegative.runner import app

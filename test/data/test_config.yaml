@@ -1,0 +1,7 @@
+url:
+  base: https://api.deezer.com/
+
+path:
+  mp3_library: test/data/mp3_library
+  mp3_regex: "*.mp3"
+  flac_library: test/data/flac_library

@@ -6,7 +6,7 @@ def test_sanity(app):
 
 
 @pytest.mark.usefixtures('fake_mp3s')
-class TestDiscovery:
+class TestFindMusic:
 
     def test_find_mp3s(self, app, fake_mp3s):
         app.run()

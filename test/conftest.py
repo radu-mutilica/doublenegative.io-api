@@ -1,11 +1,14 @@
 import os
+import shutil
+
 import yaml
 import pytest
 import doublenegative
 from random import choice
+from pathlib import Path
 from string import ascii_uppercase
 
-TEST_CONFIG_PATH = 'data/test_config.yaml'
+TEST_CONFIG_PATH = Path.cwd() / 'data' / 'test_config.yaml'
 NUM_GENRES = 3
 NUM_MP3S = 5
 
@@ -31,10 +34,13 @@ def fake_mp3s():
 
     for i in range(NUM_GENRES):
         genre_path = os.path.join(config['path']['mp3_library'], random_str())
+
+        os.makedirs(genre_path)
         genre_paths.append(genre_path)
 
         for j in range(NUM_MP3S):
-            mp3_path = os.path.join(genre_path, '.'.join((random_str(), 'mp3')))
+            mp3_name = '{} - {}'.format(random_str(), random_str())
+            mp3_path = os.path.join(genre_path, '.'.join((mp3_name, 'mp3')))
 
             with open(mp3_path, 'w') as f:
                 f.write(random_str())
@@ -44,7 +50,4 @@ def fake_mp3s():
     yield fake_mp3s
 
     for genre_path in genre_paths:
-        try:
-            os.remove(genre_path)
-        except OSError:
-            pass
+        shutil.rmtree(genre_path)

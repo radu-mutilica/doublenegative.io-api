@@ -1,0 +1,7 @@
+api:
+  deezer: 'https://api.deezer.com'
+  doublenegative:  'https://api.doublenegative.io'
+path:
+  mp3_library: 'C:\Users\Radu\Desktop\to_convert'
+  mp3_regex: '*.mp3'
+  flac_library: 'E:\downloads\flac_library'

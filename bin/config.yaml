@@ -1,7 +1,11 @@
 api:
   deezer: 'https://api.deezer.com'
   doublenegative:  'https://api.doublenegative.io'
+threading:
+  workers: 4
+  sleep_interval: 1
 path:
-  mp3_library: 'C:\Users\Radu\Desktop\to_convert'
+  mp3_library: 'G:\music'
   mp3_regex: '*.mp3'
   flac_library: 'E:\downloads\flac_library'
+  failure_report: 'failed_downloads.{}.txt'

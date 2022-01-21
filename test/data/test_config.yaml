@@ -1,7 +1,11 @@
-url:
-  base: 'https://api.deezer.com/'
-
+api:
+  deezer: 'https://api.deezer.com'
+  doublenegative:  'https://api.doublenegative.io'
+threading:
+  workers: 4
+  sleep_interval: 1
 path:
   mp3_library: 'data\mp3_library'
   mp3_regex: '*.mp3'
   flac_library: 'data\flac_library'
+  failure_report: 'failed_downloads.{}.txt'

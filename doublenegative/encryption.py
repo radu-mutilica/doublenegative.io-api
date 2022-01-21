@@ -11,9 +11,7 @@ def md5hex(data):
 
 
 def decrypt_stream(song_stream, key, f):
-    """
-    Decrypt data from the song stream, and write if to the file.
-    """
+    """Decrypt data from the song stream, and write if to the file."""
     block_size = 0x800  # 2048 bytes
     i = 0
 
@@ -46,7 +44,7 @@ def blowfish_decrypt(data, key):
 def calculate_blowfish_key(song_id):
     """Calculate the Blowfish decrypt key for a given song_id """
     h = md5hex(song_id).decode("utf-8")
-    key = "g4el58wc0zvf9na1"
+    key = "g4el58wc0zvf9na1"  # Not sure why this is what it is
 
     return "".join(
         chr(

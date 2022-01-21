@@ -2,7 +2,7 @@
 Python API Wrapper for doublenegative.io
 ## What is it?
 Use this tool to convert your mp3 music library to high quality flac format, downloaded from 
-https://www.doublenegative.io. Currently, only the `deezer` backend is supported, but you are free to 
+https://doublenegative.io. Currently, only the `deezer` backend is supported, but you are free to 
 implement others, like tidal.
 ## Usage
 - Open up `bin/config.yaml`

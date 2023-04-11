@@ -31,6 +31,7 @@ Make sure your mp3s are named following this format:
 <artist> [feat.|,|&] <another artist> - <song name> (extended/original/club mix)
 ```
 ## Todo
+- Add docstrings where appropriate
 - Add album art
 - Add id3 tags
 - Improve failure logs
